@@ -13,7 +13,12 @@ Codificação de aplicação em Golang com framework Gin para microserviço de C
 - **Prometheus e Grafana**: Monitoramento e visualização de métricas, proporcionando uma visão abrangente da saúde e performance do sistema.
 
 #### Como Funciona a Aplicação
-Esta aplicação é responsável por gerenciar as transações de compra de giftcards. Ela possui endpoints REST e GraphQL para realizar operações como comprar um giftcard e listar transações. Abaixo estão os principais fluxos da aplicação:
+Esta aplicação é responsável por gerenciar as transações de compra de giftcards. Ela possui endpoints REST e GraphQL para realizar operações como comprar um giftcard e listar transações. Abaixo estão os principais fluxos da aplicação.
+
+
+#### Diagrama da Aplicação
+
+![](https://raw.githubusercontent.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3/refs/heads/main/Diagrama/Arquitetura-Comprar-Giftcard-Microservice.png)
 
 #### Rodando aplicação:
 
