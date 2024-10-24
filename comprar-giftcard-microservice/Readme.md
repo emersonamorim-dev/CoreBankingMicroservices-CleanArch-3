@@ -62,6 +62,7 @@ http://localhost:9081/comprar-giftcard
 }
 ```
 
+- Retorno da requisição no Postman
 ```
 {
     "id": "7988d28d-fa2f-4a34-8491-1889c7f40ae6",
