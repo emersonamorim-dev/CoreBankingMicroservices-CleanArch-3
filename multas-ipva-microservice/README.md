@@ -52,7 +52,7 @@ cd CoreBankingMicroservices-CleanArch-3
 #### Configure seu usuário do WSL2 ou Ubuntu no docker-compose.yml em:
 
 ```
-build: /home/seu-usuario/corebankingmicroservices-cleanarch/seguros-autos-microservice/
+build: /home/seu-usuario/corebankingmicroservices-cleanarch-3/multas-ipva-microservice/
 ```
 
 
