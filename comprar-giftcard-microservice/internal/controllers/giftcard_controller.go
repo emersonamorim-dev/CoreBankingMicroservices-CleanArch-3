@@ -48,6 +48,7 @@ func ListarGiftCards(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"compras": compras})
 }
 
+// Endpoint listar via GraphQL
 func ListarGiftCardsGraphQL() ([]*model.GiftCard, error) {
     compras, err := repository.ListarComprasDynamoDB()
     if err != nil {
