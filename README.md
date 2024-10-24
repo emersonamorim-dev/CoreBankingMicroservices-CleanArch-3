@@ -85,3 +85,7 @@ A arquitetura poliglota garante que cada microserviço possa ser desenvolvido e 
 O Core Digital Banking Microservices 3 é uma solução moderna e eficiente para a gestão de serviços digitais, baseada em uma arquitetura poliglota e resiliente. Com a implementação da Clean Architecture, o sistema garante modularidade, manutenção simplificada e alta escalabilidade, sendo capaz de se adaptar a diferentes demandas e ao crescimento do mercado. Utilizando RabbitMQ para comunicação assíncrona, Redis para cache e bancos de dados como DynamoDB, MongoDB e PostgreSQL, o sistema oferece uma base robusta para operações digitais seguras e eficientes.
 
 A independência de cada microserviço e o uso de diferentes stacks tecnológicas permitem que o sistema evolua e integre novas funcionalidades sem impactar outros serviços, proporcionando flexibilidade e inovação. Além disso, o monitoramento e as métricas via Prometheus e Grafana, aliados à escalabilidade fornecida pelo Kubernetes, asseguram que a solução possa lidar com grandes volumes de transações e usuários, mantendo a qualidade e a segurança dos serviços digitais.
+
+### Desenvolvido por:
+Emerson Amorim [@emerson-amorim-dev](https://www.linkedin.com/in/emerson-amorim-dev/)
+
