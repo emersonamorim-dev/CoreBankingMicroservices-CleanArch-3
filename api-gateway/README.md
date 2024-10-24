@@ -59,6 +59,11 @@ git clone https://github.com/emersonamorim-dev/CoreBankingMicroservices-CleanArc
 cd CoreBankingMicroservices-CleanArch-3
 ```
 
+- Entre no diretório da aplicação:
+```
+api-gateway
+```
+
 - Instale as dependências:
 
 ```
