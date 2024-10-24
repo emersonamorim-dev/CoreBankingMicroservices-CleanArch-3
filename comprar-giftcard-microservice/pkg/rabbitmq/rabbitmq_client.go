@@ -36,7 +36,7 @@ func InitializeRabbitMQ() {
 		log.Fatalf("Erro ao abrir canal: %v", err)
 	}
 
-	// Declarar a exchange
+	// Declara a exchange
 	err = ch.ExchangeDeclare(
 		"direct_exchange_comprar_giftcard", // Nome da exchange
 		"direct",                           // Tipo da exchange
@@ -50,7 +50,7 @@ func InitializeRabbitMQ() {
 		log.Fatalf("Erro ao declarar a exchange: %v", err)
 	}
 
-	// Declarar a queue
+	// Declara a queue
 	_, err = ch.QueueDeclare(
 		"fila_giftcard", // Nome da queue
 		true,            // Durável
@@ -63,7 +63,7 @@ func InitializeRabbitMQ() {
 		log.Fatalf("Erro ao declarar a fila: %v", err)
 	}
 
-	// Vincular a queue à exchange com a routing key
+	// Vincula a queue à exchange com a routing key
 	err = ch.QueueBind(
 		"fila_giftcard",                  // Nome da queue
 		"comprar_key",                    // Routing Key
