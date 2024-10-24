@@ -19,7 +19,7 @@ async function forwardRequest(req, res) {
       return res.status(400).json({ error: 'Entidade de serviço inválida' });
     }
 
-    // encaminhar a requisição para o microserviço correto
+    // encaminha a requisição para o microserviço correto
     const responseEntity = new ResponseEntity({
       status: 200, 
       data: { message: 'Solicitação encaminhada com sucesso' }
