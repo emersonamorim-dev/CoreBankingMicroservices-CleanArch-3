@@ -78,12 +78,15 @@ Fornece monitoramento de métricas essenciais, como o número de recargas realiz
 - **Docker** para execução do ambiente de mensageria e banco de dados
 - **Maven** para build da aplicação
 
-### Passos para Execução
-1. **Clonar o Repositório**:
-   ```sh
-   git clone https://github.com/seu-usuario/recarga-celular-microservice.git
-   cd recarga-celular-microservice
-   ```
+#### Passos de Instalação
+Clone o repositório do microserviço:
+```
+git clone https://github.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3.git
+```
+```
+cd CoreBankingMicroservices-CleanArch-3
+```
+
 
 2. **Build do Projeto**:
 
