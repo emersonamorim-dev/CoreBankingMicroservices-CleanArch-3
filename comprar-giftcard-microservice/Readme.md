@@ -12,6 +12,17 @@ Codificação de aplicação em Golang com framework Gin para microserviço de C
 - **Docker**: Usado para containerização, facilitando o deploy em diferentes ambientes de forma isolada e segura.
 - **Prometheus e Grafana**: Monitoramento e visualização de métricas, proporcionando uma visão abrangente da saúde e performance do sistema.
 
+![Golang](https://img.shields.io/badge/-Golang-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![Gin Gonic](https://img.shields.io/badge/-Gin%20Gonic-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+![Redis](https://img.shields.io/badge/-Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/-RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
+![DynamoDB](https://img.shields.io/badge/-AWS%20DynamoDB-4053D6?style=for-the-badge&logo=amazon-dynamodb&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Prometheus](https://img.shields.io/badge/-Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/-Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
+
+
 #### Como Funciona a Aplicação
 Esta aplicação é responsável por gerenciar as transações de compra de giftcards. Ela possui endpoints REST e GraphQL para realizar operações como comprar um giftcard e listar transações. Abaixo estão os principais fluxos da aplicação.
 
