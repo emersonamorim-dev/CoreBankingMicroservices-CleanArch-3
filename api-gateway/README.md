@@ -46,6 +46,7 @@ Codificação em Javascrip Vanila com Node de API Gateway atua como um ponto de 
 
 ```
 build: /home/seu-usuario/corebankingmicroservices-cleanarch-3/api-gateway/
+```
 
 ##### Instalação
 - Clone o repositório:
