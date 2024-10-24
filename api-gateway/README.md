@@ -80,6 +80,18 @@ node server.js
 build: /home/seu-usuario/corebankingmicroservices-cleanarch/api-gateway
 ```
 
+#### Rodando aplicação:
+
+- Automatizei a aplicação sem precisa rodar os comandos do Docker
+```
+chmod +x run_app.sh
+```
+
+```
+./run_app.sh
+```
+
+
 
 #### Comando para buildar Imagem:
 
@@ -92,7 +104,6 @@ docker build -t api-gateway:latest .
 
 ``` 
 docker-compose up --build
-
 ```
 
 
