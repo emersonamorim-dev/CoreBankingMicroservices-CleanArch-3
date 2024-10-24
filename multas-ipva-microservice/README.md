@@ -198,9 +198,20 @@ npm install @nestjs/graphql graphql-tools graphql @nestjs/mongoose mongoose @nes
 sudo chmod -R 755 databases/mongo/data
 ```
 
+#### Rodando aplicação:
+
+- Automatizei a aplicação sem precisa rodar os comandos do Docker
+```
+chmod +x run_app.sh
+```
+
+```
+./run_app.sh
+```
 
 
-#### Comando para buildar Imagem:
+
+### Ou rode do jeito tradicional:
 
 ``` 
 docker build -t multas-ipva-microservice:latest .
