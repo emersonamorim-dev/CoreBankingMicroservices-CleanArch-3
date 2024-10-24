@@ -62,7 +62,7 @@ func ProcessarCompra(request *GiftCardRequest) error {
 	return nil
 }
 
-// ListarCompras obtém todas as compras do DynamoDB
+// obtém todas as compras do DynamoDB
 func ListarCompras() ([]models.GiftCard, error) {
 	compras, err := repository.ListarComprasDynamoDB()
 	if err != nil {
