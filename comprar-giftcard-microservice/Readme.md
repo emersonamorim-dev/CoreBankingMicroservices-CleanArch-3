@@ -3,7 +3,7 @@
 Codificação de aplicação em Golang com framework Gin para microserviço de Compra de Giftcards! Esta aplicação foi desenvolvida em **Golang** com uma arquitetura modular e robusta, facilitando a integração de serviços e o crescimento sustentável. O sistema é voltado para o processamento de compra de giftcards, utilizando um ambiente seguro e eficiente. Esta solução visa oferecer uma infraestrutura escalável, resiliente e de fácil manutenção, alinhada com boas práticas de engenharia de software.
 
 ##### Tecnologias Utilizadas
-- **Golang**: Linguagem principal utilizada no desenvolvimento, escolhida por sua performance e eficiência em aplicações distribuídas.
+- **Golang**: Linguagem principal utilizada no desenvolvimento, com a versão 1.22.5 e escolhida por sua performance e eficiência em aplicações distribuídas.
 - **Gin Gonic**: Framework HTTP que proporciona um servidor leve, rápido e ágil, ideal para a construção de APIs REST.
 - **GraphQL**: Para permitir consultas flexíveis sobre dados, fornecendo um ponto de integração único para diferentes consultas.
 - **Redis**: Utilizado como cache para evitar reprocessamento de compras repetidas, proporcionando uma maior rapidez nas operações.
