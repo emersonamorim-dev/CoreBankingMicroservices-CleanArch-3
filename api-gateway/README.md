@@ -51,28 +51,32 @@ build: /home/seu-usuario/corebankingmicroservices-cleanarch-3/api-gateway/
 - Clone o repositório:
 
 ```
-git clone https://github.com/seu-usuario/api-gateway.git
+git clone https://github.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3.git
 ```
 
 ```
-cd api-gateway
+cd CoreBankingMicroservices-CleanArch-3
 ```
 
 - Instale as dependências:
+
 ```
 npm install
 ```
+
 ```
 npm install axios@^1.7.7 dotenv@^16.0.0 express@^4.21.1 redis@^4.0.0
 ```
 
 Subir aplicação via Nodemon:
+
 ```
 node server.js
 ```
+
 - Ou você pode subir aplicação via Docker com o comando abaixo:
 
-### Aplicação está toda configurada para subir Via Docker Desktop no Windows dentro do WSL2 com Ubuntu 24.04
+#### Aplicação está toda configurada para subir Via Docker Desktop no Windows dentro do WSL2 com Ubuntu 24.04
 
 #### Configure seu usuário do WSL2 ou Ubuntu no docker-compose.yml em:
 
