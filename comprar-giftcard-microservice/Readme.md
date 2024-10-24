@@ -67,12 +67,13 @@ http://localhost:9081/comprar-giftcard
 }
 
 #### Realizar a Requisição via Postman
-- Requisição Get
+- Requisição Get retorno do Json
 
 ```
 http://localhost:9081/listar-compras
 ```
 
+```
 {
     "compras": [
         {
@@ -101,6 +102,7 @@ http://localhost:9081/listar-compras
         }
     ]
 }
+```
 
 
 #### Comando para realizar a requisição de Aplicação de forma Sincrona via GraphQL:
