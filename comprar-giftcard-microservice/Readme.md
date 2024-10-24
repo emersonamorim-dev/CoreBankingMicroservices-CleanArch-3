@@ -71,12 +71,13 @@ http://localhost:9081/comprar-giftcard
 ```
 
 #### Realizar a Requisição via Postman
-- Requisição Get retorno do Json
+- Requisição Get para Listar o retorno em Json
 
 ```
 http://localhost:9081/listar-compras
 ```
 
+- Retorno da requisição no Postman
 ```
 {
     "compras": [
