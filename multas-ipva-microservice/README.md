@@ -15,6 +15,18 @@ A solução foi desenvolvida utilizando um conjunto de tecnologias de ponta, pro
 - **Docker**: Containerização dos microserviços para facilitar o deploy, consistência no ambiente de execução e orquestração.
 - **Prometheus & Grafana**: Ferramentas para monitoramento e visualização de métricas, ajudando a garantir a saúde dos microserviços e a identificar possíveis gargalos.
 
+![NestJS](https://img.shields.io/badge/-NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+![Redis](https://img.shields.io/badge/-Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/-RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)    
+![Prometheus](https://img.shields.io/badge/-Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/-Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
+
+
 ## Arquitetura da Solução
 
 A arquitetura desta aplicação segue o padrão **Microservices**, onde cada funcionalidade principal é implementada em um serviço isolado e autônomo. A comunicação entre os microserviços é feita de forma assíncrona, utilizando o **RabbitMQ** para garantir a entrega das mensagens mesmo em situações de falha temporária de algum componente.
