@@ -56,7 +56,6 @@ build: /home/seu-usuario/corebankingmicroservices-cleanarch-3/multas-ipva-micros
 ```
 
 
-
 #### Comandos para rodar aplicação:
 
 
@@ -187,14 +186,6 @@ npm install @nestjs/graphql graphql-tools graphql @nestjs/mongoose mongoose @nes
 sudo chmod -R 755 databases/mongo/data
 ```
 
-
-### Aplicação está toda configurada para subir Via Docker Desktop no Windows dentro do WSL2 com Ubuntu 24.04
-
-#### Configure seu usuário do WSL2 ou Ubuntu no docker-compose.yml em:
-
-```
-build: /home/seu-usuario/corebankingmicroservices-cleanarch-3/multas-ipva-microservice/
-```
 
 
 #### Comando para buildar Imagem:
