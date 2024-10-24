@@ -112,7 +112,7 @@ http://localhost:9081/listar-compras
 
 #### Comando para realizar a requisição de Aplicação de forma Sincrona via GraphQL:
 
-- Mutation para criar um Cadastro de compra um Gift Card:
+- Mutation para criar um Cadastro de compra para um Gift Card:
 
 - Acesse via Navegador:
 ```
