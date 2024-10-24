@@ -30,7 +30,6 @@ Este microserviço foi desenvolvido com base em um conjunto poderoso de ferramen
 
 A arquitetura deste microserviço segue os princípios da **Clean Architecture**. Isso significa que as regras de negócio estão isoladas das preocupações de infraestrutura, permitindo uma melhor manutenção, testabilidade e evolutividade do sistema.
 
-![Arquitetura Clean](./assets/clean_architecture_diagram.png)
 
 - **Camada de Domínio**: Contém as regras de negócio e é independente de qualquer tecnologia ou framework.
 - **Camada de Casos de Uso**: Define os serviços que interagem com o domínio, como o caso de uso de realizar recarga, garantindo que toda a lógica de aplicação seja gerenciada aqui.
@@ -42,6 +41,13 @@ A arquitetura deste microserviço segue os princípios da **Clean Architecture**
 - **Clean Architecture**: Garantindo independência das regras de negócio em relação às tecnologias.
 - **Mensageria com RabbitMQ**: Utilizado para garantir que as requisições sejam processadas de maneira assíncrona, reduzindo o acoplamento entre serviços.
 - **Cache com Redis**: O Redis é usado para melhorar o desempenho das consultas, armazenando recargas recentes e evitando acesso desnecessário ao banco de dados.
+
+
+#### Diagrama da Aplicação
+
+![](https://raw.githubusercontent.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3/refs/heads/main/Diagrama/Arquitetura-Recarga-Celular-Microservice.png)
+
+
 
 #### Principais Componentes
 
