@@ -149,7 +149,7 @@ query {
 
 #### Print do GraphQL funcional
 
-![](https://raw.githubusercontent.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3/refs/heads/main/Diagrama/Captura%20de%20tela%202024-10-22%20145508.png)
+![](https://raw.githubusercontent.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3/refs/heads/main/Diagrama/Captura-tela-2024-10-22-145508.png)
 
 
 1. **Comprar Giftcard**:
