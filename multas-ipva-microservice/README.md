@@ -383,10 +383,6 @@ query {
 #### Print do GraphQL funcional
 ![](https://raw.githubusercontent.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3/refs/heads/main/Diagrama/Captura-tela-2024-10-21-154148.png)
 
-#### Print do GraphQL funcional
-![](https://raw.githubusercontent.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3/refs/heads/main/Diagrama/Captura-tela-2024-10-21-154148.png)
-
-
 
 #### Comando para rodar os Testes em Jest
 
