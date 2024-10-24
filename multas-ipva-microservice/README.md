@@ -36,7 +36,7 @@ O **Multas-IPVA-Microservice** é um dos principais microserviços desta aplica�
 
 #### Diagrama da Aplicação
 
-![](https://raw.githubusercontent.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-2/refs/heads/main/Diagrama/Diagrama-Seguros-Autos-Microservices.png)
+![](https://raw.githubusercontent.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3/refs/heads/main/Diagrama/Arquitetura-Multas-IPVA-Microservice.png)
 
 
 ##### Clone o repositório do microserviço:
