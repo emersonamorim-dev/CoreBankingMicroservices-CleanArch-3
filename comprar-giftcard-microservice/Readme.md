@@ -62,11 +62,12 @@ http://localhost:9081/comprar-giftcard
 }
 ```
 
-
+```
 {
     "id": "7988d28d-fa2f-4a34-8491-1889c7f40ae6",
     "message": "Compra realizada com sucesso"
 }
+```
 
 #### Realizar a Requisição via Postman
 - Requisição Get retorno do Json
