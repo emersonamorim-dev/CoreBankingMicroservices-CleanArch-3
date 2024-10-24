@@ -18,6 +18,7 @@ Este microserviço foi desenvolvido com base em um conjunto poderoso de ferramen
 - **Docker**: Contenerização da aplicação para garantir portabilidade e facilitação de deploy em diferentes ambientes.
 
 ![Java](https://img.shields.io/badge/-Java-F89820?style=for-the-badge&logo=java&logoColor=white)
+![Quarkus](https://img.shields.io/badge/-Quarkus-4695EB?style=for-the-badge&logo=quarkus&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/-Spring%20Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![RabbitMQ](https://img.shields.io/badge/-RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
