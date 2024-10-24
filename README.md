@@ -38,7 +38,7 @@ O Core Digital Banking Microservices 3 é uma plataforma modular e escalável co
 
 #### Diagrama da Aplicação
 
-![](https://raw.githubusercontent.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3/refs/heads/main/Diagrama/Core-Digital-Banking-Microservices-3.png)
+![](https://raw.githubusercontent.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3/refs/heads/main/Diagrama/Diagrama-Core-Digital-Banking-Microservice-3.png)
 
 #### Arquitetura
 A solução é baseada na Clean Architecture, com uma separação clara em camadas:
