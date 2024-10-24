@@ -338,6 +338,8 @@ http://localhost:8018/graphql
 ```
 
 - Fazer uma chamada via Query:
+
+```
 query {
   consultarDividaVeiculo(placa: "ELA1881") {
     placa
@@ -346,9 +348,11 @@ query {
     dividaTotal
   }
 }
-
+```
 
 - Fazer uma chamada via Mutation:
+
+```
 mutation {
   parcelarDivida(placa: "ELA1881", numeroParcelas: 12) {
     placa
@@ -358,13 +362,30 @@ mutation {
     formasPagamento
   }
 }
-
+```
 
 
 - Fazer uma chamada via Query:
+
+```
 query {
   obterNumeroConsultas(placa: "ABC1234")
 }
+```
+
+#### Print do GraphQL funcional
+
+![](https://raw.githubusercontent.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3/refs/heads/main/Diagrama/Captura-tela-2024-10-21-154020.png)
+
+#### Print do GraphQL funcional
+![](https://raw.githubusercontent.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3/refs/heads/main/Diagrama/Captura-tela-2024-10-21-154100.png)
+
+#### Print do GraphQL funcional
+![](https://raw.githubusercontent.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3/refs/heads/main/Diagrama/Captura-tela-2024-10-21-154148.png)
+
+#### Print do GraphQL funcional
+![](https://raw.githubusercontent.com/emersonamorim-dev/CoreBankingMicroservices-CleanArch-3/refs/heads/main/Diagrama/Captura-tela-2024-10-21-154148.png)
+
 
 
 #### Comando para rodar os Testes em Jest
