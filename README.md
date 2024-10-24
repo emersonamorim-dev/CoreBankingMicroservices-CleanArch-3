@@ -1,4 +1,4 @@
-### Core Digital Banking Microservices 3 - Java com Quarkus, Go com Gin e GraphQL, NestJS com TypeScript e GraphQL 🚀 🔄 🌐   
+### Core Digital Banking Microservices 3 - Java com Quarkus, Go com Gin e GraphQL, NestJS com TypeScript e GraphQL 🚀 🔄 🌐
 
 O Core Digital Banking Microservices 3 é uma plataforma modular e escalável composta por vários microserviços, cada um desenvolvido para executar uma tarefa específica dentro do ecossistema digital. Essa solução foi implementada seguindo os princípios da Clean Architecture, garantindo uma separação clara de responsabilidades, manutenção simplificada e extensibilidade do sistema. A comunicação assíncrona entre os microserviços é garantida com RabbitMQ, proporcionando resiliência e desacoplamento das funcionalidades.
 
