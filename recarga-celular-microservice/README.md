@@ -91,6 +91,24 @@ git clone https://github.com/emersonamorim-dev/CoreBankingMicroservices-CleanArc
 cd CoreBankingMicroservices-CleanArch-3
 ```
 
+#### Rodando aplicação:
+
+  - Comando para criar o Jar do Projeto
+  ```
+  mvn clean package -DskipTests
+   ```
+
+- Automatizei a aplicação sem precisa rodar os comandos do Docker
+```
+chmod +x run_app.sh
+```
+
+```
+./run_app.sh
+```
+
+
+### Ou rode do jeito tradicional:
 
 2. **Build do Projeto**:
 
