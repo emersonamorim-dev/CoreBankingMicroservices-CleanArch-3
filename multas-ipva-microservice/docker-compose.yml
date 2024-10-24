@@ -1,0 +1,79 @@
+version: '3.8'
+
+services:
+  multas-ipva-microservice:
+    build: /home/seu-usuario/corebankingmicroservices-cleanarch-3/multas-ipva-microservice/
+    environment:
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672
+      - MONGO_URI=mongodb://mongo-db:27017/multasdb  # Corrigido para MONGO_URI
+      - REDIS_HOST=redis-cache
+      - REDIS_PORT=6379
+    dns:
+      - 8.8.8.8  # DNS do Google
+    ports:
+      - "8018:8018"
+    networks:
+      - microservice-network
+    depends_on:
+      - mongo-db
+      - redis-cache
+      - rabbitmq
+
+  mongo-db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./databases/mongo/data:/data/db  # Persistência de dados no host
+    networks:
+      - microservice-network
+
+  redis-cache:
+    image: redis:latest
+    ports:
+      - "6380:6379"
+    networks:
+      - microservice-network
+
+  rabbitmq:
+    image: rabbitmq:management
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - "5673:5672"
+      - "15673:15672"
+    networks:
+      - microservice-network
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus3
+    ports:
+      - "9094:9090"
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    networks:
+      - microservice-network
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana3
+    ports:
+      - "3094:3000"
+    networks:
+      - microservice-network
+
+  zipkin:
+    image: openzipkin/zipkin:latest
+    container_name: zipkin3
+    ports:
+      - "9418:9411"
+    networks:
+      - microservice-network
+
+networks:
+  microservice-network:
+    driver: bridge

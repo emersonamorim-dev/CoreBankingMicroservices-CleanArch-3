@@ -1,0 +1,99 @@
+version: '3.9'
+
+services:
+  recarga-celular-microservice:
+    build: /home/seu-usuario/corebankingmicroservices-cleanarch-3/recarga-celular-microservice/
+    environment:
+      - QUARKUS_DATASOURCE_JDBC_URL=jdbc:postgresql://postgres-db:5432/recarga_celular
+      - QUARKUS_DATASOURCE_USERNAME=postgres
+      - QUARKUS_DATASOURCE_PASSWORD=180281
+      - QUARKUS_HTTP_PORT=8087
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=guest
+      - RABBITMQ_PASSWORD=guest
+      - QUARKUS_RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672
+    dns:
+      - 8.8.8.8
+    ports:
+      - "8087:8087"
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - microservice-network
+
+  postgres-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: recarga_celular
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 180281
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./databases/postgres/data:/var/lib/postgresql/data
+    networks:
+      - microservice-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  redis-cache:
+    image: redis:latest
+    ports:
+      - "6381:6379"
+    networks:
+      - microservice-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus2
+    ports:
+      - "9091:9090"
+    networks:
+      - microservice-network
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - '3019:3000'
+    networks:
+      - microservice-network
+
+  zipkin:
+    image: openzipkin/zipkin:latest
+    ports:
+      - "9419:9411"
+    networks:
+      - microservice-network
+
+  rabbitmq:
+    image: rabbitmq:management
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_ERLANG_COOKIE: "supersecretcookie"
+    ports:
+      - "5674:5672"
+      - "15674:15672"
+    networks:
+      - microservice-network
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+networks:
+  microservice-network:
+    driver: bridge

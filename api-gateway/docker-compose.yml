@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  api-gateway:
+    build: /home/seu-usuario/corebankingmicroservices-cleanarch/api-gateway
+    ports:
+      - "7000:7000"
+    networks:
+      - microservices-network
+    environment:
+      - MONGODB_URI=mongodb://mongo-cache:27018/api_gateway_cache
+      - MONGODB_DATABASE=api_gateway_cache
+      - SERVICE1_URL=http://service1:8018
+      - SERVICE2_URL=http://service2:8087
+      - SERVICE3_URL=http://service3:9081
+
+    depends_on:
+      - mongo-cache
+
+  mongo-cache:
+    image: mongo:latest
+    ports:
+      - "27018:27017"
+    networks:
+      - microservices-network
+
+networks:
+  microservices-network:
+    driver: bridge

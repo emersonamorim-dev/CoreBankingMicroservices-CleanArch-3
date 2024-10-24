@@ -1,0 +1,30 @@
+microservice:
+  name: corebankingmicroservices-cleanarch
+  image: cards-microservice:latest
+  replicas: 1
+  livenessProbe:
+    httpGet:
+      port: 8000
+      path: /actuator/health/liveness
+    initialDelaySeconds: 60
+    periodSeconds: 5
+  readinessProbe:
+    httpGet:
+      port: 8000
+      path: /actuator/health/readiness
+    initialDelaySeconds: 60
+    periodSeconds: 5
+  ports:
+    http:
+      name: http
+      containerPort: 8000
+  terminationGracePeriodSeconds: 20
+  service:
+    port: 8000
+  resources:
+    requests:
+      memory: '6000Mi'
+      cpu: "3000m"
+    limits:
+      memory: '6000Mi'
+      cpu: "3000m"

@@ -1,0 +1,23 @@
+type Query {
+    giftCards: [GiftCard!]!
+}
+
+type Mutation {
+    comprarGiftCard(input: NewGiftCard!): GiftCard!
+}
+
+type GiftCard {
+    id: ID!
+    usuarioID: String!
+    loja: String!
+    valor: Float!
+    dataHora: String!
+    formaPagamento: String!
+}
+
+input NewGiftCard {
+    usuarioID: String!
+    loja: String!
+    valor: Float!
+    formaPagamento: String!
+}

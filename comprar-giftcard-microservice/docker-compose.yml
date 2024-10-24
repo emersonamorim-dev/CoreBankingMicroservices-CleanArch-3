@@ -1,0 +1,89 @@
+version: '3.9'
+
+services:
+  comprar-giftcard-microservice:
+    build: /home/seu-usuario/corebankingmicroservices-cleanarch-3/comprar-giftcard-microservice/
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672/
+      - RABBITMQ_EXCHANGE=direct_exchange_comprar_giftcard
+      - RABBITMQ_QUEUE=fila_giftcard
+      - RABBITMQ_ROUTING_KEY=comprar_key
+      - DYNAMODB_ACCESS_KEY_ID=fakeAccessKey
+      - DYNAMODB_SECRET_ACCESS_KEY=fakeSecretKey
+      - DYNAMODB_REGION=us-west-2
+      - DYNAMODB_ENDPOINT=http://dynamodb-local:8000
+      - REDIS_HOST=redis-cache:6379  
+    dns:
+      - 8.8.8.8  # DNS do Google
+    ports:
+      - "9081:9081"
+    networks:
+      - microservice-network
+    depends_on:
+      - dynamodb
+      - redis-cache
+      - rabbitmq
+      - prometheus
+      - grafana
+
+  dynamodb:
+    image: amazon/dynamodb-local
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000" # Porta corrigida
+    networks:
+      - microservice-network
+
+  redis-cache:
+    image: redis:latest
+    ports:
+      - "6379:6379"  # Porta personalizada
+    networks:
+      - microservice-network
+
+  rabbitmq:
+    image: rabbitmq:management
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - microservice-network
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus6
+    ports:
+      - "9096:9090"
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    networks:
+      - microservice-network
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana7
+    ports:
+      - "3081:3000"
+    networks:
+      - microservice-network
+
+  zipkin:
+    image: openzipkin/zipkin:latest
+    container_name: zipkin5
+    ports:
+      - "9412:9411"
+    networks:
+      - microservice-network
+
+networks:
+  microservice-network:
+    driver: bridge
+
+volumes:
+  dynamodb_data:

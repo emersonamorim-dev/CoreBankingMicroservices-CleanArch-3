@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cartao-deployment
+  labels:
+    app: cartao
+spec:
+  replicas: 3  # Quantidade de réplicas
+  selector:
+    matchLabels:
+      app: cartao
+  template:
+    metadata:
+      labels:
+        app: cartao
+    spec:
+      containers:
+        - name: cartao
+          image: cartao-image:latest  # Imagem do Docker
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:postgresql://db:5432/cartao_db
+            - name: SPRING_DATASOURCE_USERNAME
+              value: postgres
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: senha_secreta
+            - name: SPRING_REDIS_HOST
+              value: redis
