@@ -35,6 +35,18 @@ npm install axios body-parser express dotenv
 ### Aplicação está toda configurada para subir Via Docker Desktop no Windows dentro do WSL2 com Ubuntu 24.04
 
 
+#### Rodando aplicação:
+
+- Automatizei a aplicação sem precisa rodar os comandos do Docker
+```
+chmod +x run_app.sh
+```
+
+```
+./run_app.sh
+```
+
+
 #### Comando para buildar Imagem:
 
 ``` 
