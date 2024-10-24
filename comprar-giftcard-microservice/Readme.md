@@ -33,7 +33,7 @@ Esta aplicação é responsável por gerenciar as transações de compra de gift
 
 #### Rodando aplicação:
 
-- Automatiza aplicação sem precisa rodar os comandos do Docker
+- Automatizei a aplicação sem precisa rodar os comandos do Docker
 ```
 chmod +x run_app.sh
 ```
