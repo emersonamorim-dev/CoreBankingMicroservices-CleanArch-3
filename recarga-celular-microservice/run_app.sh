@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 
 # Parar script em caso de erro
 set -e
