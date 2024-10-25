@@ -20,7 +20,7 @@ fi
 
 # Construir a imagem Docker
 echo "Construindo a imagem Docker..."
-docker build -t comprar-giftcard-microservice .
+docker build -t api-gateway .
 
 # Subir os serviços com Docker Compose
 echo "Subindo os containers com Docker Compose..."
