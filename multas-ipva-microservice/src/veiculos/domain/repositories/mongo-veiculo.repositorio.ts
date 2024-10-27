@@ -13,7 +13,7 @@ export class MongoVeiculoRepositorio implements VeiculoRepositorio {
   ) {}
 
   async criarVeiculo(veiculo: Veiculo): Promise<Veiculo> {
-    // Criação de um novo veículo no banco de dados MongoDB
+    // Cria um novo veículo no banco de dados MongoDB
     const novoVeiculo = new this.veiculoModel({
       placa: veiculo.placa,
       multas: veiculo.multas,
@@ -21,7 +21,6 @@ export class MongoVeiculoRepositorio implements VeiculoRepositorio {
       idProprietario: veiculo.idProprietario, 
     });
 
-    // Salva o veículo no banco de dados e retorna a entidade criada
     const veiculoDocumento = await novoVeiculo.save();
 
     return new Veiculo(
@@ -33,7 +32,6 @@ export class MongoVeiculoRepositorio implements VeiculoRepositorio {
   }
 
   
-
   async buscarPorPlaca(placa: string): Promise<Veiculo> {
     const veiculo = await this.veiculoModel.findOne({ placa });
     if (!veiculo) throw new Error('Veículo não encontrado');
