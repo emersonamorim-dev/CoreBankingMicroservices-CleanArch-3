@@ -12,7 +12,6 @@ var client *redis.Client
 var ctx = context.Background()
 
 func InitializeRedis() {
-	// Obtém o endereço e a porta do Redis da variável de ambiente
 	redisHost := os.Getenv("REDIS_HOST")
 	if redisHost == "" {
 		redisHost = "redis:6379"  
