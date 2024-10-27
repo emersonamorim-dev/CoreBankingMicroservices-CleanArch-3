@@ -31,14 +31,14 @@ services:
     image: amazon/dynamodb-local
     container_name: dynamodb-local
     ports:
-      - "8000:8000" # Porta corrigida
+      - "8000:8000"
     networks:
       - microservice-network
 
   redis-cache:
     image: redis:latest
     ports:
-      - "6379:6379"  # Porta personalizada
+      - "6379:6379"
     networks:
       - microservice-network
 
